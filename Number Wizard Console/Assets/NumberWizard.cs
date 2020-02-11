@@ -16,7 +16,7 @@ public class NumberWizard : MonoBehaviour
         Debug.Log("And Lowest Number: "+min);
         Debug.Log("Is your number higher or lower than:"+guess);
         Debug.Log("Push Up Arrow up for higher, Down Arrow for lower or Enter for Correct Guess:");
-
+        max += 1;
     }
 
     // Update is called once per frame
