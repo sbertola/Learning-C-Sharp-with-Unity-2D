@@ -7,15 +7,23 @@ public class NumberWizard : MonoBehaviour
     int max = 1000;
     int min = 1;
     int guess = 500;
-    void Start(){
-        
+    void Start()
+    {
+        StartGame();
+    }
+
+    void StartGame()
+    {
+        max = 1000;
+        min = 1;
+        guess = 500;
 
         Debug.Log("Welcome to the number wizard.");
         Debug.Log("Pick a number between...");
-        Debug.Log("Highest number: "+max);
-        Debug.Log("And Lowest Number: "+min);
-        Debug.Log("Is your number higher or lower than:"+guess);
-        Debug.Log("Push Up Arrow up for higher, Down Arrow for lower or Enter for Correct Guess:");
+        Debug.Log("Highest number: " + max);
+        Debug.Log("And Lowest Number: " + min);
+        Debug.Log("Is your number higher or lower than:" + guess);
+        Debug.Log("Up Arrow = higher, Down Arrow = lower , Enter = Correct Guess.");
         max += 1;
     }
 
@@ -26,23 +34,28 @@ public class NumberWizard : MonoBehaviour
         {
             Debug.Log("Your number is higher... Ok.");
             min = guess;
-            guess = (min + max) / 2;
-            Debug.Log("Is your number higher or lower than:" + guess);
+            NextGuess();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("Your number is lower... Ok.");
             max = guess;
-            guess = (min + max) / 2;
-            Debug.Log("Is your number higher or lower than:" + guess);
+            NextGuess();
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("I knew I could guess it!");
+            StartGame();
         }
         else if (Input.anyKeyDown)
         {
             Debug.Log("Unknown Command key was pressed.");
         }
+    }
+
+    void NextGuess()
+    {
+        guess = (min + max) / 2;
+        Debug.Log("Is your number higher or lower than:" + guess);
     }
 }
