@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6d472f54ca7db4499afde4d2d31b28, type: 3}
+  m_Name: StartingState
+  m_EditorClassIdentifier: 
+  storyText: "You suddenly awaken to the sounds of screaming and metal clashing.
+    'The village must be under attack!' you think to yourself. \n\nIt's time to act
+    quickly, will you...\n\n1.Head towards the back of your house towards the cellar?\n2.Head
+    towards the front of your house to get a better view of the situation?\n3.Pull
+    the blankets over your head and attempt to fall back to sleep?\""
