@@ -11,9 +11,15 @@ public class State : ScriptableObject
     //TextArea defines inspector textbox in unity UI, 10 here is the minimum size of the textfield and 
     //the second number 14 is the minimum number of lines before a scroll bar appears
     [TextArea(10,14)] [SerializeField] string storyText;
+    [SerializeField] State[] nextStates;
 
     public string GetStateStory()
     {
         return storyText;
+    }
+
+    public State[] GetNextStates()
+    {
+        return nextStates;
     }
 }

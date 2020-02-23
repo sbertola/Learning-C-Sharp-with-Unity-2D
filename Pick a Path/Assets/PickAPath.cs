@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +19,8 @@ public class PickAPath : MonoBehaviour
         state = startingState;
         //text within the textbox within the text component
         textComponent.text = state.GetStateStory();
-         /*   "You suddenly awaken to the sounds of screaming and metal clashing." +
+         
+        /*   "You suddenly awaken to the sounds of screaming and metal clashing." +
             "'The village must be under attack!' you think to yourself. It's time to act quickly, will you...\n\n" +
             "1.Head towards the back of your house towards the cellar?\n" +
             "2.Head towards the front of your house to get a better view of the situation?\n" +
@@ -28,6 +30,27 @@ public class PickAPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ManageState();
+    }
+
+    private void ManageState()
+    {
+        //var is a shortcut for a declared and initialized variable type it automatically knows to assign type State
+        var nextStates = state.GetNextStates();
+
+        //alpha# represents number keys
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            state = nextStates[0];
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            state = nextStates[1];
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            state = nextStates[2];
+        }
+        textComponent.text = state.GetStateStory();
     }
 }

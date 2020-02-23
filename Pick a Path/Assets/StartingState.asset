@@ -17,3 +17,6 @@ MonoBehaviour:
     quickly, will you...\n\n1.Head towards the back of your house towards the cellar?\n2.Head
     towards the front of your house to get a better view of the situation?\n3.Pull
     the blankets over your head and attempt to fall back to sleep?\""
+  nextStates:
+  - {fileID: 11400000, guid: b4d0b60e02bb9d14baf12da295409eb2, type: 2}
+  - {fileID: 11400000, guid: 7df46689db3adb94b97bc25ee6da95ac, type: 2}
