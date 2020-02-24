@@ -38,26 +38,21 @@ public class PickAPath : MonoBehaviour
         //var is a shortcut for a declared and initialized variable type it automatically knows to assign type State
         var nextStates = state.GetNextStates();
 
-        //alpha# represents number keys
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        for(int index = 0; index < nextStates.Length; index++)
         {
-            state = nextStates[0];
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            state = nextStates[1];
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            state = nextStates[2];
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            state = nextStates[3];
-        }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Debug.Log("Game will end here");
+            //alpha# represents number keys
+            if (Input.GetKeyDown(KeyCode.Alpha1 + index))
+            {
+                state = nextStates[index];
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                Debug.Log("Game will restart here");
+            }
+            else if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("Game will end here");
+            }
         }
         textComponent.text = state.GetStateStory();
     }
