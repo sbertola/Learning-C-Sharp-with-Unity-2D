@@ -19,4 +19,3 @@ MonoBehaviour:
     the blankets over your head and attempt to fall back to sleep?\""
   nextStates:
   - {fileID: 11400000, guid: b4d0b60e02bb9d14baf12da295409eb2, type: 2}
-  - {fileID: 11400000, guid: 7df46689db3adb94b97bc25ee6da95ac, type: 2}

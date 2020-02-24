@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e6d472f54ca7db4499afde4d2d31b28, type: 3}
-  m_Name: Room 2
+  m_Name: QuickEnd
   m_EditorClassIdentifier: 
-  storyText: This is the second room
+  storyText: "You pull the covers back over your head. After a few minutes you find
+    that you actually fall back asleep. You awaken to sunlight shining through your
+    bedroom window. What a terrible nightmare that was last night you think to yourself.
+    \n\nTime to start the day.\nEnd."
   nextStates:
-  - {fileID: 11400000, guid: a027173735afce04793f49e6a9fb5645, type: 2}
+  - {fileID: 11400000, guid: 96f945df1d986114f8354d8b3802b4c5, type: 2}

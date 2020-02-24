@@ -51,6 +51,14 @@ public class PickAPath : MonoBehaviour
         {
             state = nextStates[2];
         }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            state = nextStates[3];
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Game will end here");
+        }
         textComponent.text = state.GetStateStory();
     }
 }

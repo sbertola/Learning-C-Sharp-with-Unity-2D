@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6d472f54ca7db4499afde4d2d31b28, type: 3}
+  m_Name: OutsideFront
+  m_EditorClassIdentifier: 
+  storyText: 'You head outside and start rushing around the village to see what you
+    can. As you turn a corner you lock eyes with one of the raiders. Oh crap! The
+    raider starts coming towards you. You look around quickly and you notice a sword
+    and shield in front of you next to a fallen soldier. Theres only time to grab
+    one.
+
+
+    1.Take the sword
+
+    2.Take the shield'
+  nextStates:
+  - {fileID: 11400000, guid: 0ff04361d4482c14bbea920157aa56ff, type: 2}
+  - {fileID: 11400000, guid: ac46f583f5d1af64b890cccb05887fd0, type: 2}

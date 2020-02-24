@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6d472f54ca7db4499afde4d2d31b28, type: 3}
+  m_Name: GameOverGood
+  m_EditorClassIdentifier: 
+  storyText: 'As the knights chase the last of the raiders back into the forrest,
+    you see the sun begin to peak over the horrizon. Guess it''s time to start the
+    day. You toss the battered shield to the ground and head towards the barn to
+    check on the animals and begin the days chores. That''s enough adventure for
+    me you think to yourself.
+
+
+    End Adventure'
+  nextStates:
+  - {fileID: 11400000, guid: 96f945df1d986114f8354d8b3802b4c5, type: 2}
