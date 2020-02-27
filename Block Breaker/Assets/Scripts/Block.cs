@@ -12,16 +12,28 @@ public class Block : MonoBehaviour
 
     private void Start()
     {
-        level = FindObjectOfType<Level>();
-        level.CountBreakableBlocks();
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        DestryBlock();
-        //can use the collision parameter to get additional information from the collision.
+        CountBreakableBlocks();
     }
 
-    private void DestryBlock()
+    private void CountBreakableBlocks()
+    {
+        level = FindObjectOfType<Level>();
+        if (tag == "Breakable")
+        {
+            level.CountBlocks();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(tag == "Breakable")
+        {
+            DestroyBlock();
+            //can use the collision parameter to get additional information from the collision.
+        }
+    }
+
+    private void DestroyBlock()
     {
         PlayDestroySFX();
         Destroy(gameObject);
