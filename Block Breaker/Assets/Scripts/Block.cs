@@ -16,14 +16,15 @@ public class Block : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         DestryBlock();
-        Destroy(gameObject);
         //can use the collision parameter to get additional information from the collision.
     }
 
     private void DestryBlock()
     {
+        FindObjectOfType<GameStatus>().AddToScore();
+        AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
+        Destroy(gameObject);
         level.BlockDestroyed();
     }
 }
