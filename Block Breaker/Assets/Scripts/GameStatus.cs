@@ -14,6 +14,22 @@ public class GameStatus : MonoBehaviour
     //state variables
     [SerializeField] int currentScore = 0;
 
+
+    //happens before start
+    private void Awake()
+    {
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        if (gameStatusCount > 1)
+        {
+            //need to disable game object first since Destroy is last step of unity execution
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     private void Start()
     {
         scoreText.text = currentScore.ToString();
