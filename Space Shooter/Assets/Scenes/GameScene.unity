@@ -528,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 7140888882956756384, guid: e14401cc0dca30840852fba1de935425,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7140888882956756384, guid: e14401cc0dca30840852fba1de935425,
         type: 3}
@@ -614,6 +614,10 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 252469a61bf39824f9fe0a6914465cfc, type: 2}
   - {fileID: 11400000, guid: 574f77b8238f1b84fbc16f6cf23bbeb2, type: 2}
+  - {fileID: 11400000, guid: c02c607cdb7f73c4e8fb66d32612541b, type: 2}
+  - {fileID: 11400000, guid: 3c3a84f395eee674ab960eb706a5bec1, type: 2}
+  startingWave: 0
+  looping: 1
 --- !u!4 &2115737985
 Transform:
   m_ObjectHideFlags: 0
